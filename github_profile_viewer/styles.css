@@ -4,11 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #2d3436;
+    background-color: #1E201E;
     color: #dfe6e9;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,8 @@ body {
 
 body > div{
     padding: 0.75em 0;
-    min-width: 800px;
+    width: 100%;
+    max-width: 750px;
 }
 
 .nav_buttons {
@@ -27,25 +28,104 @@ body > div{
     justify-content: space-between;
 }
 
-.profile_searcher > div{
-    padding-bottom: 1em;
+.logo {
+    color: gray;
+}
+
+.logo .bold {
+    color: white;
+    font-size: larger;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.search_and_profile > div:first-child{
+    margin-bottom: 1em;
+}
+
+.search_and_profile > div, .search_and_profile input {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .search input{
     padding: 1em;
     height: 3em;
     width: 100%;
+    border: 0;
 }
 
 .search input::placeholder{
-    color: #dfe6e9;
-}
-
-.profile {
-    min-height: 300px;
+    color: lightgray;
 }
 
 .profile, .search input {
-    background-color: #636e72;
+    background-color: #3C3D37;
     color: #dfe6e9;
+    width: 100%;
+}
+
+.profile {
+    display: flex;
+    min-height: 350px;
+    padding: 2em;
+    gap: 2em;
+}
+
+
+.profile_img_div {
+    width: 125px;
+}
+
+#profile_img {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.detail_div {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.first_section > div {
+    margin-bottom: 0.25em;
+}
+
+.name_and_join_date {
+    display: flex;
+    justify-content: space-between;
+}
+
+#name {
+    font-size: 1.50rem;
+    font-weight: bold;
+}
+
+#github_username {
+    color: #0097e6;
+}
+
+.user_details {
+    display: flex;
+    background-color: #1E201E;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    min-height: 90px;
+    align-items: center;
+}
+
+.user_details p {
+    text-align: center;
+
+}
+
+.social_media_prof {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }

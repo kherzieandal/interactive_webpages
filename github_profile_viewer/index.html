@@ -5,28 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fetch a Github Profile</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="nav_buttons">
-        <p>Github Profile Viewer by Kherzie Andal</p>
+        <p class="logo"><span class="bold">Github Profile Viewer</span> by Kherzie Andal</p>
         <button>Dark Mode/Light Mode</button>
     </div>
-    <div class="profile_searcher">
+    <div class="search_and_profile">
         <div class="search">
-            <input type="text" placeholder="Input a github username">
+            <input type="text" placeholder="Input a github username" id="usernameInput" onchange="fetchGithub()">
         </div>
         <div class="profile">
-            <div class="profile_sec"><img></div>
-            <div class="detail_sec">
-                <div class="name_and_join_date">
-                    <p>Name</p>
-                    <p>Joined [Date]</p>
+            <div class="profile_img_div">
+                <img src="images/person-circle.svg" id="profile_img">
+            </div>
+            <div class="detail_div">
+                <div class="first_section">
+                    <div class="name_and_join_date">
+                        <p id="name">Name</p>
+                        <p id="joined_date">Joined [Date]</p>
+                    </div>
+                    <div id="github_username"><p>@username</p></div>
+                    <div id="bio"><p>Username's Bio</p></div>
                 </div>
-                <div class="github_username"><p>@username</p></div>
-                <div class="bio"><p>Username's Bio</p></div>
-                <div class="user_details"></div>
+                <div class="user_details">
+                    <div class="repo">
+                        <p class="bold">Repos</p>
+                        <p id="repo_count">#</p>
+                    </div>
+                    <div class="followers">
+                        <p class="bold">Followers</p>
+                        <p id="followers_count">#</p>
+                    </div>
+                    <div class="following">
+                        <p class="bold">Following</p>
+                        <p id="following_count">#</p>
+                    </div>
+                </div>
                 <div class="social_media_prof">
-                    
+                    <div class="location">
+                        <p id="location">Location</p>
+                    </div>
+                    <div class="website">
+                        <p id="website">website.com</p>
+                    </div>
+                    <div class="twitter">
+                        <p id="twitter_username">@twitter</p>
+                    </div>
+                    <div class="organization">
+                        <p id="organization">Organization</p>
+                    </div>
                 </div>
             </div>
         </div>
