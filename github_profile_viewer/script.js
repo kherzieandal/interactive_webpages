@@ -10,11 +10,17 @@ const fetchGithub = () => {
 }
 
 const showGithubDetails = (json) => {
-    const {avatar_url, name, created_at, login, bio, public_repos, followers, following, location, blog, twitter_username, company} = json
+    const {avatar_url, name, created_at, login, bio, public_repos, followers, following, location, blog, twitter_username, company} = json;
+    const date = new Date(created_at);
+    const dateFormatter = new Intl.DateTimeFormat(
+        'en-PH', {
+            dateStyle: "long"
+        }
+    )
 
     document.getElementById('profile_img').setAttribute('src', avatar_url)
     document.getElementById('name').innerText = name ? name : "Not available"
-    document.getElementById('joined_date').innerText = `Joined ${created_at}`
+    document.getElementById('joined_date').innerText = `Joined ${dateFormatter.format(date)}`
     document.getElementById('github_username').innerText = "@" + login
     document.getElementById('bio').innerText = bio ? bio : "Not available"
     document.getElementById('repo_count').innerText = public_repos
