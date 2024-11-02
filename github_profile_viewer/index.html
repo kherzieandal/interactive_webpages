@@ -8,23 +8,30 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="nav_buttons">
+    <div id="nav_buttons">
         <p class="logo"><span class="bold">Github Profile Viewer</span> by Kherzie Andal</p>
         <button>Dark Mode/Light Mode</button>
+
     </div>
+
     <div class="search_and_profile">
+
         <div class="search">
             <input type="text" placeholder="Input a github username" id="usernameInput" onchange="fetchGithub()">
         </div>
+        <div id="error_texts">
+            <p id="username_not_found">Username not found</p>
+            <p id="enter_valid_username">Please enter a valid username</p>
+        </div>
         <div class="profile">
             <div class="profile_img_div">
-                <img src="images/person-circle.svg" id="profile_img">
+                <img src="images/person-circle-white.svg" id="profile_img">
             </div>
             <div class="detail_div">
                 <div class="first_section">
                     <div class="name_and_join_date">
                         <p id="name">Name</p>
-                        <p id="joined_date">Joined [Date]</p>
+                        <p id="joined_date">Date Created</p>
                     </div>
                     <div id="github_username"><p>@username</p></div>
                     <div id="bio"><p>Username's Bio</p></div>

@@ -23,7 +23,9 @@ body > div{
     max-width: 750px;
 }
 
-.nav_buttons {
+/* First Div */
+
+#nav_buttons {
     display: flex;
     justify-content: space-between;
 }
@@ -41,11 +43,24 @@ body > div{
     font-weight: bold;
 }
 
-.search_and_profile > div:first-child{
+/* Error Texts */
+
+#error_texts p {
+    color: lightcoral;
+    text-align: right;
+}
+
+#username_not_found, #enter_valid_username {
+    display: none;
+}
+
+/* Second Div */
+
+.search_and_profile > div:nth-child(2){
     margin-bottom: 1em;
 }
 
-.search_and_profile > div, .search_and_profile input {
+.profile, .search_and_profile input {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
